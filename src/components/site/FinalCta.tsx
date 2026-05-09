@@ -1,7 +1,45 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+
+const CATEGORIES = [
+  { v: "womenswear", l: "Womenswear" },
+  { v: "menswear", l: "Menswear" },
+  { v: "accessories", l: "Accessories" },
+  { v: "genderless", l: "Genderless / Conceptual" },
+];
 
 export function FinalCta() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      email: String(fd.get("email") || "").trim(),
+      portfolio_url: String(fd.get("portfolio") || "").trim(),
+      category: String(fd.get("category") || ""),
+    };
+
+    if (!payload.name || !payload.email || !payload.portfolio_url) {
+      setError("Please fill in every field."); setLoading(false); return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      setError("That email doesn't look right."); setLoading(false); return;
+    }
+    if (!/^https?:\/\//i.test(payload.portfolio_url)) {
+      setError("Portfolio link must start with http:// or https://"); setLoading(false); return;
+    }
+
+    const { error: dbError } = await supabase.from("applications").insert(payload);
+    setLoading(false);
+    if (dbError) { setError("Submission failed. Try again."); return; }
+    setSubmitted(true);
+  }
 
   return (
     <section id="apply" className="relative py-24 md:py-32 overflow-hidden">
@@ -19,10 +57,7 @@ export function FinalCta() {
           </p>
         </div>
 
-        <form
-          onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-          className="lg:col-span-6 bg-surface border border-border p-8 md:p-10 space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="lg:col-span-6 bg-surface border border-border p-8 md:p-10 space-y-5">
           {submitted ? (
             <div className="py-12 text-center">
               <div className="display text-3xl text-primary">You're in the queue.</div>
@@ -31,20 +66,19 @@ export function FinalCta() {
           ) : (
             <>
               <div className="eyebrow">Application — 4 fields</div>
-              <Field label="Name" name="name" placeholder="First Last" />
-              <Field label="Email" name="email" type="email" placeholder="you@studio.com" />
-              <Field label="Portfolio link" name="portfolio" placeholder="https://" />
+              <Field label="Name" name="name" placeholder="First Last" maxLength={120} />
+              <Field label="Email" name="email" type="email" placeholder="you@studio.com" maxLength={255} />
+              <Field label="Portfolio link" name="portfolio" placeholder="https://" maxLength={500} />
               <div>
-                <label className="eyebrow block mb-2">Category</label>
-                <select required className="w-full bg-background border border-border px-4 py-3.5 font-serif text-foreground focus:outline-none focus:border-primary">
-                  <option>Womenswear</option>
-                  <option>Menswear</option>
-                  <option>Accessories</option>
-                  <option>Genderless / Conceptual</option>
+                <label htmlFor="category" className="eyebrow block mb-2">Category</label>
+                <select id="category" name="category" required defaultValue="womenswear"
+                  className="w-full bg-background border border-border px-4 py-3.5 font-serif text-foreground focus:outline-none focus:border-primary">
+                  {CATEGORIES.map(c => <option key={c.v} value={c.v}>{c.l}</option>)}
                 </select>
               </div>
-              <button type="submit" className="btn-cut w-full">
-                <span className="label">Pay entry fee & upload portfolio</span>
+              {error && <p className="font-mono text-xs text-destructive">{error}</p>}
+              <button type="submit" disabled={loading} className="btn-cut w-full disabled:opacity-60">
+                <span className="label">{loading ? "Submitting…" : "Pay entry fee & upload portfolio"}</span>
                 <span className="label-alt">No turning back</span>
               </button>
               <p className="text-xs font-mono text-foreground/50 text-center">$50 early bird · Need-based waivers available</p>
@@ -56,12 +90,12 @@ export function FinalCta() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
+function Field({ label, name, type = "text", placeholder, maxLength }: { label: string; name: string; type?: string; placeholder?: string; maxLength?: number }) {
   return (
     <div>
       <label className="eyebrow block mb-2" htmlFor={name}>{label}</label>
       <input
-        id={name} name={name} type={type} required placeholder={placeholder}
+        id={name} name={name} type={type} required placeholder={placeholder} maxLength={maxLength}
         className="w-full bg-background border border-border px-4 py-3.5 font-serif text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary"
       />
     </div>
