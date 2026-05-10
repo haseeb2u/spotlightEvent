@@ -3,9 +3,30 @@ import w2 from "@/assets/winner-2.jpg";
 import w3 from "@/assets/winner-3.jpg";
 
 const ALUMNI = [
-  { img: w1, name: "Maria Chen", year: "S02 — 2023", before: "FIT senior, no industry contacts.", after: "Assistant Designer, Coach.", quote: "THE CUT got my portfolio in front of the right people. Three weeks after the finale, I had two job offers." },
-  { img: w2, name: "Daniel Okafor", year: "S02 — 2023", before: "Self-taught, selling on Depop.", after: "Founder, OKAFOR Studio. Stocked at SSENSE.", quote: "The marketplace alone paid my rent for a year. The mentorship paid for everything else." },
-  { img: w3, name: "Lucia Vargas", year: "S03 — 2024", before: "1 collection, 280 followers.", after: "Resident designer, Parsons MFA + LVMH Prize semi-finalist.", quote: "I came in with one collection. I left with a runway, a buyer, and a thesis advisor." },
+  { 
+    img: w1, 
+    name: "The Emerging Visionary", 
+    year: "Founding Class - 2026", 
+    before: "Final year student with a thesis ready to launch.", 
+    after: "Creative Director of an Adorzia-funded label.", 
+    quote: "I have the vision but lacked the capital. ADORZIA is the only platform providing 100% ownership with full production support." 
+  },
+  { 
+    img: w2, 
+    name: "The Industry Pivot", 
+    year: "Founding Class - 2026", 
+    before: "Working professional designing for major retail brands.", 
+    after: "Independent Founder with a 50/50 profit-sharing partner.", 
+    quote: "I was tired of building someone else's brand. ADORZIA gives me the investment to finally build and own my own name." 
+  },
+  { 
+    img: w3, 
+    name: "The Heritage Artisan", 
+    year: "Founding Class - 2026", 
+    before: "Self-taught designer focused on traditional craft.", 
+    after: "Marketplace-ready brand with a year of mentorship.", 
+    quote: "The PKR 300K prize and manufacturing backing mean I can scale my artisanal craft without the financial risk of a startup." 
+  },
 ];
 
 export function Winners() {
