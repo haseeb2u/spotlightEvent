@@ -1,3 +1,4 @@
+
 import w1 from "@/assets/winner-1.jpg";
 import w2 from "@/assets/winner-2.jpg";
 import w3 from "@/assets/winner-3.jpg";
@@ -34,8 +35,8 @@ export function Winners() {
     <section id="winners" className="py-24 md:py-32 border-b border-border">
       <div className="container-cut">
         <div className="mb-14">
-          <span className="eyebrow">— Alumni</span>
-          <h2 className="mt-3 text-5xl md:text-7xl">Where they are now.</h2>
+          <span className="eyebrow">— The ADORZIA Legacy</span>
+          <h2 className="mt-3 text-5xl md:text-7xl">Who we are looking for.</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -48,8 +49,8 @@ export function Winners() {
               </div>
               <h3 className="mt-5 text-2xl">{a.name}</h3>
               <div className="mt-3 font-mono text-xs uppercase tracking-wider text-foreground/60 space-y-1">
-                <div><span className="text-primary">Before →</span> {a.before}</div>
-                <div><span className="text-primary">After →</span> {a.after}</div>
+                <div><span className="text-primary">Background →</span> {a.before}</div>
+                <div><span className="text-primary">Opportunity →</span> {a.after}</div>
               </div>
               <blockquote className="mt-4 font-serif italic text-foreground/80 border-l-2 border-primary pl-4">
                 "{a.quote}"
@@ -61,3 +62,4 @@ export function Winners() {
     </section>
   );
 }
+
