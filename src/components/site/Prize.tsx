@@ -1,10 +1,11 @@
+
 const PERKS = [
-  { k: "$50,000", v: "Cash prize", d: "No equity. No strings. Wired within 14 days of the finale." },
-  { k: "$25K", v: "Fabric grant", d: "Sponsored by Mood Fabrics + a deadstock allocation from Première Vision." },
-  { k: "12 months", v: "Mentorship", d: "Bi-weekly calls with a CFDA designer and our buying judges." },
-  { k: "70%", v: "Marketplace cut", d: "Featured collection drops on our shop. You keep the majority of every sale." },
-  { k: "Paris", v: "Sourcing trip", d: "All-expenses to Première Vision Paris with our production team." },
-  { k: "PR", v: "Editorial coverage", d: "Vogue India, Dazed, and Highsnobiety run features on the top 10." },
+  { k: "PKR 300K", v: "Cash prize", d: "Awarded to the Top 1 winner to accelerate their brand's growth." },
+  { k: "100%", v: "Ownership", d: "You remain the sole legal owner of your brand, trademarks, and IP." },
+  { k: "12 months", v: "Investment", d: "Full production and manufacturing funding for the Top 10 designers." },
+  { k: "50%", v: "Profit share", d: "Net profit split after all production and marketing expenses are recovered." },
+  { k: "Market", v: "Global Launch", d: "Exclusive featured collection drop on the ADORZIA digital marketplace." },
+  { k: "Runway", v: "Fall 2026", d: "Professional showcase for the Top 10 finalists on Sept 14th." },
 ];
 
 export function Prize() {
