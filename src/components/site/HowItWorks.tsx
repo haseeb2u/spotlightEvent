@@ -1,8 +1,9 @@
+
 const STEPS = [
-  { n: "01", t: "Submit 3 looks", d: "Upload your portfolio, sketches, and a 60-second pitch video. Four fields. That's it." },
-  { n: "02", t: "Public vote + judge scores", d: "100 designers move forward. Your audience matters as much as the panel." },
-  { n: "03", t: "Live finale in NYC", d: "10 finalists fly out for a televised runway show during NYFW. We cover travel." },
-  { n: "04", t: "Winner takes the prize", d: "$50K cash, a production run, and one year of mentorship with our judges." },
+  { n: "01", t: "Online Application", d: "Open June 1st. Submit your portfolio and vision. Internal screening shortlists the Top 100." },
+  { n: "02", t: "Jury Selection", d: "Industry Creative Directors and a prestigious jury evaluate the Top 100 to select the Top 10 finalists." },
+  { n: "03", t: "The Grand Runway", d: "Sept 14th finale. Top 10 showcase on the runway. Winner determined by influencers, public, and stakeholders." },
+  { n: "04", t: "Incubation & Launch", d: "Top 1 winner receives PKR 300K. Top 10 begin a 1-year funded production and marketplace partnership." },
 ];
 
 export function HowItWorks() {
@@ -15,7 +16,7 @@ export function HowItWorks() {
             <h2 className="mt-3 text-5xl md:text-7xl">How it works.</h2>
           </div>
           <p className="font-serif text-foreground/70 max-w-sm">
-            No portfolio reviews behind closed doors. Every round is judged in public.
+         No closed-door decisions. Every finalist is chosen through a transparent mix of jury expertise and public voting.
           </p>
         </div>
 
