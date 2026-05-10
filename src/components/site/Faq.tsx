@@ -1,13 +1,14 @@
 import { useState } from "react";
 
 const FAQS = [
-  { q: "Do I need a full collection?", a: "No. 3 to 5 looks is enough. We're judging point of view, not output volume." },
-  { q: "Who owns my designs?", a: "You do. We license images for promotion only — never the IP, never the patterns." },
-  { q: "Can international designers apply?", a: "Yes. Finalists receive a travel + accommodation stipend covering NYC for finale week." },
-  { q: "What if I don't win?", a: "Every semi-finalist gets a portfolio review with a judge plus access to our sponsor directory." },
-  { q: "What does it cost to enter?", a: "$50 early bird, $200 standard. Need-based fee waivers available — no questions asked." },
-  { q: "How are judges chosen?", a: "We rotate working designers, buyers, and editors. No celebrity figureheads who skip the rounds." },
+  { q: "Do I need to submit a full collection?", a: "No. Your initial application only requires your portfolio and design vision. We judge your creative point of view, not your current inventory." },
+  { q: "Who owns the rights to my brand?", a: "You do. You retain 100% legal ownership of your trademarks, IP, and designs. ADORZIA is an investment and launch partner, not an owner." },
+  { q: "Is the production funding a loan?", a: "No. For the Top 10 finalists, ADORZIA covers the manufacturing and production costs as an investment in your brand's market entry." },
+  { q: "What happens if I don't win the grand prize?", a: "All Top 10 finalists receive professional runway exposure, a year of mentorship, and their collections are launched on our digital marketplace." },
+  { q: "How does the profit-sharing work?", a: "For the funded collections, we use a 50/50 net profit split after production and marketing costs are recovered, ensuring you earn while you grow." },
+  { q: "Who is eligible to apply?", a: "We are open to final-year fashion students, recent alumni, and independent designers across Pakistan who specialize in slow fashion and heritage craft." },
 ];
+
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -17,7 +18,7 @@ export function Faq() {
         <div className="lg:col-span-4">
           <span className="eyebrow">— FAQ</span>
           <h2 className="mt-3 text-5xl md:text-6xl">Read this first.</h2>
-          <p className="mt-6 font-serif text-foreground/65">Still unsure? Email <a href="mailto:hello@thecut.fashion" className="text-primary underline underline-offset-4">hello@thecut.fashion</a>.</p>
+          <p className="mt-6 font-serif text-foreground/65">Still unsure? Email <a href="mailto:spotlight@adorzia.com" className="text-primary underline underline-offset-4">spotlight@adorzia.com</a>.</p>
         </div>
         <div className="lg:col-span-8">
           {FAQS.map((f, i) => {
