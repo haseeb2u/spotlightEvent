@@ -38,9 +38,9 @@ export function Hero() {
         </div>
 
         <div className="mt-auto pt-16 grid grid-cols-3 gap-6 max-w-2xl">
-          <Stat n="300K" l="Cash prize" />
-          <Stat n="1,200+" l="Last applicants" />
-          <Stat n="50" l="Spots open" />
+          <Stat n="300K" l="PKR Cash prize" />
+          <Stat n="100" l="Shortlisted" />
+          <Stat n="10" l="Finalist spots" />
         </div>
       </div>
 
