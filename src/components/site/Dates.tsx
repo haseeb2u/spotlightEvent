@@ -1,9 +1,9 @@
 const DATES = [
-  { d: "MAR 14", t: "Early entry deadline", note: "Save $150 on entry fee.", urgent: true },
-  { d: "APR 28", t: "Final entry deadline", note: "Last chance. No extensions." },
-  { d: "MAY 22", t: "Public voting opens", note: "Top 100 announced. Mobilize your audience." },
-  { d: "JUN 18", t: "Semi-finalist announcement", note: "10 finalists named. Travel booked." },
-  { d: "SEP 09", t: "Live finale, NYFW", note: "Brooklyn Navy Yard. Tickets on sale Aug 1." },
+  { d: "June 1", t: "Online Application Open", note: "Save $150 on entry fee.", urgent: true },
+  { d: "July 15", t: "Final entry deadline", note: "Last chance. No extensions." },
+  { d: "Aug 1", t: "Public voting opens", note: "Top 100 announced. Mobilize your audience." },
+  { d: "Aug 15", t: "Announcement of Top 10", note: "10 finalists named. Travel booked." },
+  { d: "SEP 14", t: "Live finale, Lahore", note: "Lahore FashionShow " },
 ];
 
 export function Dates() {
