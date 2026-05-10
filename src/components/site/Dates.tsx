@@ -1,9 +1,12 @@
+
 const DATES = [
-  { d: "June 1", t: "Online Application Open", note: "Save $150 on entry fee.", urgent: true },
-  { d: "July 15", t: "Final entry deadline", note: "Last chance. No extensions." },
-  { d: "Aug 1", t: "Public voting opens", note: "Top 100 announced. Mobilize your audience." },
-  { d: "Aug 15", t: "Announcement of Top 10", note: "10 finalists named. Travel booked." },
-  { d: "SEP 14", t: "Live finale, Lahore", note: "Lahore FashionShow " },
+  { d: "June 1", t: "Online Applications Open", note: "Submit your portfolio and design vision.", urgent: true },
+  { d: "July 15", t: "Application Deadline", note: "Final entry cutoff. No extensions." },
+  { d: "July 25", t: "Top 100 Shortlist", note: "Announcement of the first selection round." },
+  { d: "August 10", t: "Final Jury Review", note: "Selection of the Top 10 finalists." },
+  { d: "August 15", t: "Top 10 Announcement", note: "Finalists officially named." },
+  { d: "Aug 16 - Sep 13", t: "Production Phase", note: "Collection development and mentorship." },
+  { d: "Sept 14", t: "The Grand Runway", note: "Live finale and winner announcement." },
 ];
 
 export function Dates() {
@@ -16,8 +19,8 @@ export function Dates() {
             <h2 className="mt-3 text-5xl md:text-7xl">Key dates.</h2>
           </div>
           <a href="#apply" className="btn-cut">
-            <span className="label">Lock in early bird</span>
-            <span className="label-alt">Save $150</span>
+            <span className="label">LStart your application</span>
+            <span className="label-alt">June 1st Launch</span>
           </a>
         </div>
 
