@@ -16,7 +16,7 @@ export function Hero() {
       <div className="relative container-cut pt-28 md:pt-36 pb-16 min-h-[100svh] flex flex-col">
         <div className="flex items-center gap-3 eyebrow">
           <span className="inline-block w-8 h-px bg-primary" />
-          Season 04 · Open Call
+          Fall 2026 · Open Call
         </div>
 
         <h1 className="mt-8 text-[14vw] md:text-[8.5vw] lg:text-[7.2rem] xl:text-[8.5rem] leading-[0.85]">
@@ -26,19 +26,19 @@ export function Hero() {
 
         <p className="mt-8 max-w-xl font-serif text-lg md:text-xl text-foreground/85 leading-snug">
           3 rounds. 10 finalists. 1 winner.<br />
-          Judged by Zara's former Head of Design, the CFDA, and SSENSE buyers.
+          Judged by HSY, Maheen Khan, Deepak Perwani, and Nomi Ansari.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <a href="#apply" className="btn-cut">
-            <span className="label">Apply Now — Early bird ends Mar 14</span>
+            <span className="label">Apply Now - Early bird ends June 1st </span>
             <span className="label-alt">Yes, I'm ready</span>
           </a>
           <a href="#prize" className="btn-ghost">Download prospectus →</a>
         </div>
 
         <div className="mt-auto pt-16 grid grid-cols-3 gap-6 max-w-2xl">
-          <Stat n="$50K" l="Cash prize" />
+          <Stat n="300K" l="Cash prize" />
           <Stat n="1,200+" l="Last applicants" />
           <Stat n="50" l="Spots open" />
         </div>
@@ -47,7 +47,7 @@ export function Hero() {
       {/* Side ticker */}
       <div className="hidden lg:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right">
         <span className="font-mono text-xs tracking-[0.4em] uppercase text-foreground/60">
-          NYC · PARIS · LAGOS · SEOUL · MEXICO CITY
+         KARACHI · LAHORE · ISLAMABAD · MULTAN · FAISALABAD
         </span>
       </div>
     </section>
