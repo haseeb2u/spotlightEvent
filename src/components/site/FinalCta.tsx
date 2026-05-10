@@ -53,7 +53,7 @@ export function FinalCta() {
             away.
           </h2>
           <p className="mt-6 font-serif text-lg text-foreground/75 max-w-md">
-            Last season: 1,200 applicants for 50 spots. Apply before <span className="text-primary font-bold">March 14</span> and save $150.
+           Launch Season: 100 designers  will be shortlisted for 10 finalist spots. Apply by <span className="text-primary font-bold">July 15 </span> to secure your place.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export function FinalCta() {
           {submitted ? (
             <div className="py-12 text-center">
               <div className="display text-3xl text-primary">You're in the queue.</div>
-              <p className="mt-3 font-serif text-foreground/70">Check your inbox for your application link within 60 seconds.</p>
+              <p className="mt-3 font-serif text-foreground/70">Check your inbox for your application link. Registration opens June 1st.</p>
             </div>
           ) : (
             <>
@@ -81,7 +81,7 @@ export function FinalCta() {
                 <span className="label">{loading ? "Submitting…" : "Pay entry fee & upload portfolio"}</span>
                 <span className="label-alt">No turning back</span>
               </button>
-              <p className="text-xs font-mono text-foreground/50 text-center">$50 early bird · Need-based waivers available</p>
+              <p className="text-xs font-mono text-foreground/50 text-center">Applications open June 1st · Need-based waivers available</p>
             </>
           )}
         </form>
