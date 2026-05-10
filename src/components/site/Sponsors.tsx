@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
+
 const BUDGETS = [
-  { v: "", l: "Select a budget range" },
-  { v: "under_25k", l: "Under $25K" },
-  { v: "25_100k", l: "$25K – $100K" },
-  { v: "100_250k", l: "$100K – $250K" },
-  { v: "250k_plus", l: "$250K+" },
+  { v: "", l: "Select a sponsorship tier" },
+  { v: "tier_founding", l: "Founding Partner (Headline)" },
+  { v: "tier_production", l: "Production & Manufacturing Sponsor" },
+  { v: "tier_award", l: "Award & Prize Sponsor (PKR 300K+)" },
+  { v: "tier_logistics", l: "Logistics & Venue Sponsor" },
+  { v: "tier_digital", l: "Digital & Media Partner" },
 ];
+
+
 
 export function Sponsors() {
   const [open, setOpen] = useState(false);
@@ -46,11 +50,20 @@ export function Sponsors() {
           <h2 className="mt-3 text-4xl md:text-5xl">Own the next generation of talent.</h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
-          <ul className="font-serif text-foreground/80 text-lg space-y-4 mb-8">
-            <li className="flex gap-3"><span className="text-primary font-mono text-sm pt-1">01</span> First look at 100+ vetted emerging designers.</li>
-            <li className="flex gap-3"><span className="text-primary font-mono text-sm pt-1">02</span> Branded challenges, fabric placement, judge seats.</li>
-            <li className="flex gap-3"><span className="text-primary font-mono text-sm pt-1">03</span> Quarterly trend report distilled from 1,200+ submissions.</li>
-          </ul>
+         <ul className="font-serif text-foreground/80 text-lg space-y-4 mb-8">
+            <li className="flex gap-3">
+                <span className="text-primary font-mono text-sm pt-1">01</span> 
+                  Direct access to Pakistan’s top 100 shortlisted emerging designers.
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="text-primary font-mono text-sm pt-1">02</span> 
+                            Exclusive brand integration in the Runway Finale and Jury Panel.
+                                  </li>
+ <li className="flex gap-3">
+    <span className="text-primary font-mono text-sm pt-1">03</span> 
+    Strategic partnership in the inaugural Adorzia Founding Designers Program.
+  </li>
+</ul>
           <button onClick={() => setOpen(o => !o)} className="btn-ghost">
             {open ? "Close form ×" : "Request sponsorship deck →"}
           </button>
